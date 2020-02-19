@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Контакты</title>
+  </nav>
+  <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Ветеренарная лечебница "Тыгдык"</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                  </button>
+          </div>
+          
+          <?php 
+         session_start();
+          if(
+          isset($_SESSION["id"]) && 
+          isset($_SESSION["login"]) &&
+          isset($_SESSION["pass"]))
+          {        require_once ("loginnavbar.html");
+          }
+          else{
+            require_once("logoutnavbar.html");
+          }
+         ?>
+        </div>
+      </header>
+      <img src ="http://vetkolcovo.ru/wp-content/themes/vetkolcovo/images/picture.jpg" width="70%" class="center-img" >
+      <?php require_once("navbar.html") ?>
+
+    
+      <main role="main" class="container">
+            <div class="row">
+                    <div class="col-md-8 blog-main">
+                    </div><!-- /.blog-main -->
+                    <div class="row">
+                            <div class="col-lg-4">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Yn_pHa9aEAXQJs0aNP_NsTi9ITYm2btZ8KfGSoOr-5IE7iU8cw" width="230" class="circle-img">
+                              <h2>Как нас найти </h2>
+                              <p>
+                                Наш адрес: Улица Котлостроителей, дом 18, корпус 2<br/>
+                                Добраться можно на: 
+                                       <ul>
+                                           <li>маршрутноe такси № 5,17,29,108</li>
+                                           <li>трамваи № 6,9</li>
+                                           <li>автобусы № 1, 47, 325 </li></ul>
+                                Остановка: Спутник.     
+                            </p>
+                       
+                              
+                            </div><!-- /.col-lg-4 -->
+                            <div class="col-lg-4">
+                             <img src="https://s1.1zoom.ru/big0/382/425769-svetik.jpg" width="170" class="circle-img">
+                              <h2>Контакты</h2>
+                              <p><ul>
+                                  <li>Вы можете позвонить нам по<br/> одному из номеров телефонов: +7(8445)76256,
+                                +7(8445)76256, +7(927)356892</li>
+                                <li>Или написать нам на почту: tigidik@gmail.com</li>
+                              </ul></p>
+                
+                            </div><!-- /.col-lg-4 -->
+                            <div class="col-lg-4">
+                                    <img src="https://p2.zoon.ru/preview/5cTGZjZsUf1iy98jzh-OKA/552x331x85/1/a/5/original_57d6a61a40c08827298b5c7e_5afa7557bb2f4.jpg" width="245" class="circle-img">
+                              <h2>Режим работы</h2>
+                              <p> Работаем без перерывов и выходных: <ol>
+                                 <li>Понедельник - пятница 9:00-21:00</li>
+                                 <li> Суббота - воскресенье 10:00-20:00</li>
+                                </ol>
+                              </p>
+                             
+
+                            </div><!-- /.col-lg-4 -->
+                          </div><!-- /.row -->
+          
+                <div class="p-3">
+                  <h4 class="font-italic">Мы в социальных сетях:</h4>
+                  <ol class="list-unstyled">
+                    <li><a href="https://www.instagram.com"><img src = "https://cdn.icon-icons.com/icons2/1584/PNG/512/3721672-instagram_108066.png" width=20> Instagram</a></li>
+                    <li><a href="https://mobile.twitter.com"><img src = "http://s1.iconbird.com/ico/0912/SomacroIconSet/w500h5001347632760twitterold.png" width=20> Twitter</a></li>
+                    <li><a href="https://ru-ru.facebook.com"><img src = "http://s1.iconbird.com/ico/2013/6/271/w513h5131371296104Facebook.png" width=20> Facebook</a></li>
+                    <li><a href="https://web.telegram.org"><img src = "https://pngicon.ru/file/uploads/telegram.png" width=20> Telegram</a></li>
+                  </ol>
+                </div>
+              </aside><!-- /.blog-sidebar -->
+          
+            </div><!-- /.row -->
+    
+
+
+      
+      
+      
+        
+      
+       
+        <style>
+            .center-img {
+              display: block;
+            margin: 0 auto;
+            }
+            .circle-img {
+                border-radius: 50%;
+                
+                box-shadow: 0 0 0 3px blueviolet, 0 0 13px #333;
+            }
+         </style>
+    
+      </div><!-- /.row -->
+  
+
+
+    
+    </main><!-- /.container -->
+    
+    <footer class="blog-footer">
+      
+      <p>
+        <a href="#">Вернуться к началу</a>
+        
+      </p>
+    </footer>
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+ 
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

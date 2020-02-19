@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Журнал посещений</title>
+  </nav>
+  <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Ветеренарная лечебница "Тыгдык"</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                  </button>
+          </div>
+          
+           <?php 
+         session_start();
+          if(
+          isset($_SESSION["id"]) && 
+          isset($_SESSION["login"]) &&
+          isset($_SESSION["pass"]))
+          {        require_once ("loginnavbar.html");
+          }
+          else{
+            require_once("logoutnavbar.html");
+          }
+         ?>
+        </div>
+      </header>
+      <img src ="http://vetkolcovo.ru/wp-content/themes/vetkolcovo/images/picture.jpg" width="70%" class="center-img" >
+      <?php require_once("navbar.html") ?>
+
+    
+      
+    
+   
+
+    <hr class="featurette-divider">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Дата</th>
+            <th scope="col">Время</th>
+            <th scope="col">Имя хозяина</th>
+            <th scope="col">Питомец</th>
+            <th scope="col">Врач</th>
+            <th scope="col">Кабинет</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">10.09.19</th>
+            <th scope="col">9:05</th>
+            <td>Марк Марков</td>
+            <td>Кот Пушок</td>
+            <td>Хирург</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <th scope="row">10.09.19</th>
+            <th scope="col">17:20</th>
+            <td>Яков Яковлев</td>
+            <td>Енот Барс</td>
+            <td>Невролог</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row">12.09.19</th>
+            <th scope="col">15:30</th>
+            <td>Лариса Иванова</td>
+            <td>Попугай Кеша</td>
+            <td>Терапевт</td>
+            <td>3</td>
+            </tr>
+            <tr>
+                <th scope="row">12.09.19</th>
+                <th scope="col">20:05</th>
+                <td>Клавдия Ефимова</td>
+                <td>Cобака Пират</td>
+                <td>Офтальмолог</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <th scope="row">13.09.19</th>
+                <th scope="col">10:20</th>
+                <td>Игнат Вилс</td>
+                <td>Игуана Керра</td>
+                <td>Терапевт</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <th scope="row">13.09.19</th>
+                <th scope="col">12:30</th>
+                <td>Октябрина Кирова</td>
+                <td>Собака Барбос</td>
+                <td>Кардиолог</td>
+                <td>4</td>
+          </tr>
+        </tbody>
+      </table>
+         
+    
+       
+        <style>
+            .center-img {
+              display: block;
+      margin: 0 auto;
+            }
+         </style>
+    
+      </div><!-- /.row -->
+  
+
+
+    
+    </main><!-- /.container -->
+    
+    <footer class="blog-footer">
+      
+      <p>
+        <a href="#">Вернуться к началу</a>
+        
+      </p>
+    </footer>
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+ 
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

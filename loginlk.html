@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Личный кабинет</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Добро пожаловать, <?php echo $login ?></h1>
+        <p class="lead">Ваш id: '<?php echo $id?>'</p>
+        <p class="lead">Ваша секретная информация: '<?php echo $secret?>'</p>
+        <ul class="list-unstyled">
+          <li>
+            <a class="btn btn-success" type="button" href="index.php">Главная</a>
+          </li>
+          <li>
+            <a class="btn btn-danger" type="button" href="logout.php">Выйти</a>
+          </li>
+        </ul>
+        <p class="lead">Ваши записи к врачу:</p>
+        <?php
+        $index = 1;
+        //$row = mysqli_fetch_row($records)
+        while(($records_data = mysqli_fetch_assoc($records)) != NULL){
+          echo("<div class='p-3 mb-2 bg-success text-white'><h3> Запись: ". $index."</h3></div>");
+          echo("<div class='p-3 mb-2 bg-primary text-white'><p> Имя хозяина: ".$records_data["owner_name"]."</p></div>");
+          echo("<div class='p-3 mb-2 bg-secondary text-white'><p> Питомец: ".$records_data["animal"]."</p></div>");
+          echo("<div class='p-3 mb-2 bg-primary text-white'><p> Кличка питомца: ".$records_data["animal_name"]."</p></div>");
+          echo("<div class='p-3 mb-2 bg-secondary text-white'><p> Дата приема: ".$records_data["date"]."</p></div>");
+          echo("<div class='p-3 mb-2 bg-primary text-white'><p> Время приема: ".$records_data["time"]."</p></div>");
+          echo("<div class='p-3 mb-2 bg-secondary text-white'><p> Причина посещения: ".$records_data["reasons"]."</p></div>");
+          $index++;
+        }
+        ?>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

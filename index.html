@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Ветеринарная лечебница</title>
+  </nav>
+  <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Режим работы: пн-вс 9:00-21:00</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                  </button>
+          </div>
+          
+         <?php 
+         session_start();
+          if(
+          isset($_SESSION["id"]) && 
+          isset($_SESSION["login"]) &&
+          isset($_SESSION["pass"]))
+          {        require_once ("loginnavbar.html");
+          }
+          else{
+            require_once("logoutnavbar.html");
+          }
+         ?>
+        </div>
+      </header>
+      <img src ="http://vetkolcovo.ru/wp-content/themes/vetkolcovo/images/picture.jpg" width="70%" class="center-img" >
+      <?php require_once("navbar.html") ?>
+    
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">Ветеренарная лечебница "Тыгдык"</h1>
+          <p class="lead my-3">С нами ваши питомцы будут в порядке!</p>
+        </div>
+      </div>
+    
+      
+    
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          
+    
+          <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Оборудование <span class="text-muted">нового поколения</span></h2>
+        <p class="lead">Наша лечебница оснашена самым новейшим оборудованием в стране. Присутствуют аппарты для лечения и диагностики различныйх заболеваний и недугов ваших домашних любимцев.</p>
+      </div>
+      <div class="col-md-5">
+        
+        <img src="http://www.spbvet.ru/upload/medialibrary/ef5/ef53636876f0c7364361dd806d9b102b.jpg"  width="300" height="270">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Персонал <span class="text-muted">наивысшей категории</span></h2>
+        <p class="lead">Каждый из наших сотрудников обладает высокой квалификацией, добротой, а также, конечно, особой любовью и заботой к животным.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+          <img src="http://vetnika.ru/images/depositphotos_19229465_xl-2015-572.jpg"  width="300" height="270">>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Кабинеты <span class="text-muted">и лекарства</span></h2>
+        <p class="lead"> Кабинеты нашей клиники оборудованы всем необходимым, чтобы животным было комфортно во время приема, а все лекарства сертифицированные и приобретаются только у самых лучших поставщиков. </p>
+      </div>
+      <div class="col-md-5">
+          <img src="https://p0.zoon.ru/preview/6BTVsa9pcKtoaBv8XZws3g/2400x1500x75/1/1/6/original_50ebcdfea0f302161200002d_5bc9af56dc957.jpg"  width="300" height="270">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    
+         
+    
+        </div><!-- /.blog-main -->
+    
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">О нас</h4>
+            <p class="mb-0">Самая лучшая <em>ветеренарная лечебница</em> во всей округе. У нас самые квалифицированные врачи, самые новейшие аппарты и самые действующие препараты.</p>
+          </div>
+    
+          <div class="p-3">
+            <h4 class="font-italic">Архив посещений</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">Август 2019</a></li>
+              <li><a href="#">Июль 2019</a></li>
+              <li><a href="#">Июнь 2019</a></li>
+              <li><a href="#">Май 2019</a></li>
+              <li><a href="#">Апрель 2019</a></li>
+              <li><a href="#">Март 2019</a></li>
+              <li><a href="#">Февраль 2019</a></li>
+              <li><a href="#">Январь 2019</a></li>
+              <li><a href="#">Декабрь 2018</a></li>
+              <li><a href="#">Ноябрь 2018</a></li>
+              <li><a href="#">Октябрь 2018</a></li>
+              <li><a href="#">Сентябрь 2018</a></li>
+            </ol>
+          </div>
+    
+          <div class="p-3">
+            <h4 class="font-italic">Мы в социальных сетях:</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://www.instagram.com"><img src = "https://cdn.icon-icons.com/icons2/1584/PNG/512/3721672-instagram_108066.png" width=20> Instagram</a></li>
+              <li><a href="https://mobile.twitter.com"><img src = "http://s1.iconbird.com/ico/0912/SomacroIconSet/w500h5001347632760twitterold.png" width=20> Twitter</a></li>
+              <li><a href="https://ru-ru.facebook.com"><img src = "http://s1.iconbird.com/ico/2013/6/271/w513h5131371296104Facebook.png" width=20> Facebook</a></li>
+              <li><a href="https://web.telegram.org"><img src = "https://pngicon.ru/file/uploads/telegram.png" width=20> Telegram</a></li>
+            </ol>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+    
+      </div><!-- /.row -->
+  
+
+
+    
+    </main><!-- /.container -->
+    
+    <footer class="blog-footer">
+      
+      <p>
+        <a href="#">Вернуться к началу</a>
+        
+      </p>
+    </footer>
+    <style>
+        .center-img {
+          display: block;
+  margin: 0 auto;
+        }
+     </style>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

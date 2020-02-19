@@ -1,0 +1,37 @@
+<form action="add_record.php" method="POST">
+    <fieldset>
+        <legend>Запись на прием</legend>
+        <div class="half-width">
+            <label for="owner_name">Введите ваше имя:</label>
+            <input type="text" name="owner_name" id="owner_name" pattern="[А-Яа-я]+[[:blank:]][А-Яа-я]+[[:blank:]][А-Яа-я]+" placeholder="ФИО полностью" required>
+        </div>
+        <div class="two-third-width">
+            <label for="animal">Выберете питомца:</label>
+            <select id="animal" name="animal" required>
+            <option value="cat">Кот</option>
+            <option value="dog">Собака</option>
+            <option value="iguan">Игуана</option>
+            <option value="raccon">Енот</option>
+            <option value="parrot">Попугай</option>
+            <option value="mouse">Мышь</option>
+            <option value="rat">Крыса</option>
+            <option value="snake">Змея</option>
+            <option value="rabbit">Кролик</option>
+            </select>
+        </div>
+        <div class="half-width">
+            <label for="animal_name">Введите кличку питомца:</label>
+            <input type="text" name="animal_name" id="animal_name" pattern="[А-Яа-я]+" placeholder="Кличка питомца" required>
+        </div> 
+        <div class="half-width">
+            <label for="date">Выберите дату и время:</label>
+            <input type="date" name="date" value=<?php echo $cur_date; ?> min = <?php echo $cur_date; ?> step="0">
+            <input type="time" name="time" min="09:00" max="21:00" required>
+        </div>
+        <label for="reasons">Причина посещения:</label>
+        <textarea name="reasons" id="reasons" rows="5" placeholder="Напишите причину "  maxlength="256" minlength="12" required></textarea>
+        </fieldset>
+        <div class="buttons">
+            <input type="submit" value="Записаться">
+        </div>
+    </form>
