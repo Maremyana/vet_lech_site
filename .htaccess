@@ -1,0 +1,21 @@
+<Files index.html>
+deny from all
+</Files>
+<Files navbar.html>
+deny from all
+</Files>
+<Files loginnavbar.html>
+deny from all
+</Files>
+<Files logoutnavbar.html>
+deny from all
+</Files>
+<Files zapisacanapriem.html>
+deny from all
+</Files>
+<Files site2.html>
+deny from all
+</Files>
+<Files contact.html>
+deny from all
+</Files>
